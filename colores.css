@@ -1,0 +1,171 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    color: #222;
+    margin: 0;
+    overflow: hidden;
+  }
+  body.active{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(69, 69, 69);
+    display: flex;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .parte1,.parte2{
+  
+    width: 50%;
+    transform-origin: top left ;
+    position: absolute;
+    transition: transform 2s linear;
+    height: 100%;
+  }
+  .parte2{
+    transform-origin: top right ;
+    right: 0;
+  }
+  
+  .parte1.show-nav {
+    transform: rotatey(-90deg);
+  }
+  .parte2.ver {
+    transform: rotatey(90deg);
+  }
+  
+  
+  .circle {
+    background-color: #641919;
+    position: absolute;
+    left: 46%;
+    top: 50%;
+    border-radius: 25px;
+  }
+  .circle.end{
+    opacity: 0;
+    display: none;
+  }
+  .circle button {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    font-family: fantasy;
+    border: 0;
+    letter-spacing: 1px;
+    background: transparent;
+    font-size: 20px;
+    color: #000000;
+  }
+  .circle:hover{
+    transition: .3s;
+    background: red;
+    border: 3px dashed black;
+  }
+  .contenedorJuego{
+    width: 100%;
+    display: flex;
+  }
+  .divColores,.contenedorNombres{
+    width: 20%;
+  }
+  .colores{
+    width: 60%;
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    cursor:grab;
+    background: white;
+    border-radius: 100%;
+  }
+  #red{
+    background: red;
+  }
+  #white{
+    background: white;
+  }
+  #green{
+    background-color: green;
+  }
+  #beige{
+    background: beige;
+  }
+  #black{
+    background: black;
+  }
+  #violet{
+    background: violet;
+  }
+  #yellow{
+    background: yellow;
+  }
+  #orange{
+    background: orange;
+  }
+  #purple{
+    background:purple;
+  }
+  #pink{
+    background:pink;
+  }
+  #aqua{
+    background:aqua;
+  }
+  #blue{
+    background:blue;
+  }
+  #tomato{
+    background:tomato;
+  }
+  #fuchsia{
+    background:fuchsia;
+  }
+  #turquoise{
+    background:turquoise;
+  }
+  #crimson{
+    background:crimson;
+  }
+  
+  /* CARTAS */
+  .contenedorCartas{
+    color: #f2f2f2;
+    width: 100%;
+      max-width: 700px;
+      margin: auto;
+  
+  }
+  .cartas{
+    width: 50%;
+      height: 200px;
+      border-radius:20px;
+    opacity: 0;
+      margin-bottom: 20px;
+    cursor: pointer; 
+    outline: 3px dashed black;
+    font-size: 20px;
+      transition: .7s ease-in-out all;
+  }
+  
+  .contenedorCartas .cartas.visible {
+      opacity: 1;
+      transform:scale(1)  translateX(170px);
+  }
+  .nombres{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-top: 20px;
+    background: white;
+    border-radius: 100px;
+  }
+  
